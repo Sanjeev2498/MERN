@@ -15,6 +15,8 @@ console.log(`Error on Site`,err);
 });
 const app=express();
 
+app.use(express.json());
+
 app.listen(9000,()=>{
     console.log(`Server is listening at PORT : 9000!`);
 });
