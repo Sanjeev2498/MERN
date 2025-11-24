@@ -74,7 +74,7 @@ export default function SignUp() {
       <span className='text-blue-500 p-3 rounded-lg'>Sign In</span>
       </Link>
       </div>
-      <p className='text-red-700 mt-5 p-3 text-3l text-center rounded-lg'>{error && 'Something went wrong !'}</p>
+      <p className='text-red-700 mt-5 p-3 text-3l text-center rounded-lg'>{error && 'Something went wrong !'}</p><p></p>
     </div>
   )
 }
