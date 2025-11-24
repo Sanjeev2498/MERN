@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 
 export default function SignUp() {
   const [formData, setFormData] =useState({});
@@ -8,6 +8,7 @@ export default function SignUp() {
   const handleChange =(e) =>{
     setFormData({ ...formData, [e.target.id]:e.target.value});
   }
+  const navigate =useNavigate();
   // PROXY 
   //Alternative of Axios
   const handleSubmit = async (e) =>{
@@ -31,6 +32,7 @@ export default function SignUp() {
       }
       // setError(false);
       // console.log(data);
+      navigate('/sign-in');
     } catch (err) {
       console.error(err);
       setLoading(false);
